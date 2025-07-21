@@ -1,4 +1,5 @@
 'use server'
+
 import User from '@/database/user.model'
 import { connectToDatabase } from '@/lib/mongoose'
 import { ICreateUser, IUpdateUser } from './types'
@@ -7,8 +8,6 @@ export const createUser = async (data: ICreateUser) => {
 	try {
 		await connectToDatabase()
 		const { clerkId, email, fullName, picture } = data
-
-		// ? Foydalanuvchi bazada bormi yo`qmi tekshirish
 		const isExist = await User.findOne({ clerkId })
 
 		if (isExist) {
@@ -22,6 +21,7 @@ export const createUser = async (data: ICreateUser) => {
 		}
 
 		const newUser = User.create(data)
+
 		return newUser
 	} catch {
 		throw new Error('Error creating user. Please try again.')
