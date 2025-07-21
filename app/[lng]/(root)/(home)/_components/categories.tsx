@@ -1,7 +1,8 @@
 'use client'
 
 import CategoryCard from '@/components/cards/category-card'
-import { categories } from '@/constants/const'
+// import CategoryCard from '@/components/cards/category-card'
+import { categoriess } from '@/constants/const'
 import useTranslate from '@/hooks/use-lng'
 
 function Categories() {
@@ -18,8 +19,8 @@ function Categories() {
 				</p>
 			</div>
 			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-6 gap-4'>
-				{categories.map(item => (
-					<CategoryCard key={item.label} {...item} />
+				{categoriess.map((item, ind) => (
+					<CategoryCard key={ind} {...item} />
 				))}
 			</div>
 		</div>

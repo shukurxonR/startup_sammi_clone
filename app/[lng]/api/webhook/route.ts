@@ -2,7 +2,8 @@ import { createUser, updateUser } from '@/actions/user.action'
 import { WebhookEvent } from '@clerk/nextjs/server'
 import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
-import { Webhook } from './../../../../node_modules/svix/src/webhook'
+import { Webhook } from 'svix'
+
 
 export async function POST(req: Request) {
 	const WEBHOOK_SECRET = process.env.NEXT_WEBHOOK_CLERK_SECRET

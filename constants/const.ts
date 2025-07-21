@@ -144,7 +144,7 @@ export const courses = [
 	},
 ]
 
-export const categories = [
+export const categoriess = [
 	{
 		icon: '/categories/digital-marketing.svg',
 		label: 'Digital Marketing',

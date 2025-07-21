@@ -11,7 +11,7 @@ function CoursesCard(courses: ICourse) {
 				<CardContent className='relative h-56 w-full'>
 					<Image
 						fill
-						src={courses.previewImage}
+						src={courses.previewImage!}
 						alt={courses.title}
 						className='object-cover rounded-md'
 					/>
