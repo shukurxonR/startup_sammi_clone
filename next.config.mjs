@@ -1,14 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	// images: {
-	// 	// domains: [
-	// 	// 	'sammi.ac',
-	// 	// 	'www.sammi.ac', // 👉 buni alohida qo‘shing
-	// 	// 	'utfs.io',
-	// 	// 	'qk9g5hsrut.ufs.sh',
-	// 	// ],
-
-	// },
+	experimental: {
+		// Edge Runtime da Node.js API-dan foydalanishni ruxsat berish
+		allowMiddlewareResponseBody: true,
+	},
 	images: {
 		remotePatterns: [
 			{ protocol: 'https', hostname: '*' },
