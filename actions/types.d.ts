@@ -10,6 +10,7 @@ export interface ICreateCourse {
 	currentPrice: number
 	previewImage: string
 }
+
 export interface ICreateUser {
 	clerkId: string
 	fullName: string
